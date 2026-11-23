@@ -155,3 +155,25 @@ vite.config.ts.timestamp-*
 .nx/cache
 .nx/workspace-data
 .nx/migrate-runs
+
+# Dashboard build and test output
+dist-ssr/
+build/
+test-results/
+test-results-*/
+playwright-report/
+.nyc_output/
+pnpm-debug.log*
+
+# Local OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+
+# Local scratch and generated diagnostics
+/build_output.txt
+/test_output.txt
+/temp_check.txt
+/used_apis.json
+/find_apis.cjs
