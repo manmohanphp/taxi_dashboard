@@ -606,6 +606,9 @@ function App() {
         setAuthMessage("We couldn't start sign-in. Please try again.");
         return;
       }
+      // Non-production backends echo the code; prefill it when present and well-formed.
+      const echoedOtp = String(res.data?.otp ?? res.data?.data?.otp ?? "").trim();
+      setOtp(isValidOtpCode(echoedOtp) ? echoedOtp : "");
       setAuthChallengeId(String(challengeId)); setAuthStep("verify");
       setAuthMessage(String(res.data?.message || res.data?.data?.message || "Code sent. Enter it below to sign in."));
     } catch (e) { setAuthMessage(formatError(e)); }
