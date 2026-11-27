@@ -1,0 +1,353 @@
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.admin-dashboard .dashboard-welcome {
+  align-items: center;
+  margin: 0;
+  padding: 2px 1px 1px;
+}
+
+.dashboard-welcome h1 {
+  font-size: 26px;
+}
+
+.dashboard-welcome p {
+  margin-top: 6px;
+}
+
+.dashboard-welcome-actions {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.dashboard-health-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 31px;
+  padding: 0 10px;
+  border: 1px solid #dcefe5;
+  border-radius: 999px;
+  background: #f1faf5;
+  color: #26704d;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dashboard-health-chip i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #26a269;
+  box-shadow: 0 0 0 3px #26a2691a;
+}
+
+.dashboard-health-chip.offline {
+  border-color: #f0d9dc;
+  background: #fff5f5;
+  color: #a8434b;
+}
+
+.dashboard-health-chip.offline i {
+  background: #d95b63;
+  box-shadow: 0 0 0 3px #d95b631a;
+}
+
+.dashboard-welcome-actions .btn {
+  min-height: 38px;
+}
+
+.dashboard-welcome-actions .btn:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.dashboard-refresh-status {
+  color: #8794a7;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.dashboard-stat-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 11px;
+  min-width: 0;
+  min-height: 128px;
+  padding: 17px 15px 15px;
+  border: 1px solid #e5eaf2;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #fff 0%, #fbfcff 100%);
+  box-shadow: 0 3px 12px #18365c08;
+  color: #20304a;
+  text-align: left;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+}
+
+.dashboard-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbdaf4;
+  box-shadow: 0 9px 22px #18365c12;
+}
+
+.dashboard-stat-card:focus-visible,
+.dashboard-quick-grid .quick-action:focus-visible {
+  outline: 2px solid #75a2f3;
+  outline-offset: 2px;
+}
+
+.dashboard-stat-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #edf4ff;
+  color: #3479e8;
+}
+
+.dashboard-stat-icon.violet {
+  background: #f2efff;
+  color: #7654d6;
+}
+
+.dashboard-stat-icon.amber {
+  background: #fff7e5;
+  color: #bb8200;
+}
+
+.dashboard-stat-icon.teal {
+  background: #eaf8f6;
+  color: #188e83;
+}
+
+.dashboard-stat-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.dashboard-stat-copy small {
+  color: #75839a;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.dashboard-stat-copy strong {
+  margin-top: 9px;
+  color: #20304a;
+  font: 800 25px/1 Manrope, sans-serif;
+  letter-spacing: -0.6px;
+}
+
+.dashboard-stat-copy>span {
+  margin-top: 8px;
+  color: #8996a8;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.dashboard-stat-arrow {
+  margin-top: 2px;
+  color: #a5b0bf;
+}
+
+.dashboard-content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(330px, 0.9fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.dashboard-actions-panel,
+.dashboard-health-panel {
+  min-width: 0;
+}
+
+.dashboard-actions-panel .panel-title,
+.dashboard-health-panel .panel-title {
+  margin-bottom: 16px;
+}
+
+.dashboard-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.dashboard-quick-grid .quick-action {
+  min-height: 64px;
+  padding: 11px 12px;
+  border-color: #e6ebf2;
+  background: #fff;
+}
+
+.dashboard-quick-grid .quick-action:hover {
+  transform: translateY(-1px);
+  border-color: #cbdaf4;
+  background: #f9fbff;
+}
+
+.dashboard-quick-grid .quick-action b {
+  color: #2d3d55;
+  font-size: 10px;
+}
+
+.dashboard-quick-grid .quick-action small {
+  color: #8996a8;
+  font-size: 9px;
+}
+
+.dashboard-health-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dashboard-health-heading .panel-title {
+  min-width: 0;
+}
+
+.dashboard-health-list {
+  margin-top: 1px;
+}
+
+.dashboard-health-row {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 9px;
+  min-height: 43px;
+  border-bottom: 1px solid #edf0f5;
+  color: #43536b;
+  font-size: 10px;
+}
+
+.dashboard-health-check {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  background: #edf8f2;
+  color: #22a06b;
+}
+
+.dashboard-health-check.warning {
+  background: #fff7e6;
+  color: #b67c00;
+}
+
+.dashboard-health-check.danger {
+  background: #fff0f1;
+  color: #c44b53;
+}
+
+.dashboard-health-row strong {
+  color: #68778e;
+  font-size: 9px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.dashboard-health-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 13px;
+}
+
+.dashboard-health-footer>span {
+  color: #8996a8;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+.dashboard-health-footer .text-button {
+  flex: 0 0 auto;
+  margin: 0;
+  font-size: 10px;
+}
+
+@media (max-width: 1300px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .dashboard-content-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .admin-dashboard {
+    gap: 14px;
+  }
+
+  .admin-dashboard .dashboard-welcome {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-welcome-actions {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .dashboard-stat-card {
+    grid-template-columns: auto minmax(0, 1fr);
+    min-height: 116px;
+    padding: 13px 11px;
+    gap: 8px;
+  }
+
+  .dashboard-stat-icon {
+    width: 31px;
+    height: 31px;
+  }
+
+  .dashboard-stat-arrow {
+    display: none;
+  }
+
+  .dashboard-stat-copy strong {
+    font-size: 22px;
+  }
+
+  .dashboard-quick-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dashboard-health-heading {
+    flex-direction: column;
+  }
+
+  .dashboard-health-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
